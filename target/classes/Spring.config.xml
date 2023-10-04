@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+    <bean id="MakeMyTrip" class="project.MakeMyTrip">
+		 <property name="travel" ref="TravelByBus"></property>
+    </bean>
+
+<bean id="TravelByBus" class="project.TravelByBus">
+        <property name="TravelBy" value="By bus for 10 hours"></property>
+    </bean>
+
+    <bean id="TravelByTrain" class="project.TravelByTrain">
+		  <property name="TravelBy" value="By train for 6 hours"></property>
+    </bean>
+
+    <bean id="TravelByFlight" class="project.TravelByFlight">
+  <property name="TravelBy" value="By flight for 4 hours"></property>
+            </bean>
+</beans>
